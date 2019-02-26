@@ -11,3 +11,7 @@ C:\Users\Aline\Desktop\SI\github\TradingSystem\TradingSystem\obj\Debug\TradingSy
 C:\Users\Aline\Desktop\SI\github\TradingSystem\TradingSystem\obj\Debug\TradingSystem.csproj.CopyComplete
 C:\Users\Aline\Desktop\SI\github\TradingSystem\TradingSystem\obj\Debug\TradingSystem.exe
 C:\Users\Aline\Desktop\SI\github\TradingSystem\TradingSystem\obj\Debug\TradingSystem.pdb
+C:\Users\Aline\Desktop\SI\github\TradingSystem\TradingSystem\bin\Debug\Data.dll
+C:\Users\Aline\Desktop\SI\github\TradingSystem\TradingSystem\bin\Debug\Presentation.dll
+C:\Users\Aline\Desktop\SI\github\TradingSystem\TradingSystem\bin\Debug\Data.pdb
+C:\Users\Aline\Desktop\SI\github\TradingSystem\TradingSystem\bin\Debug\Presentation.pdb

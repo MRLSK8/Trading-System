@@ -86,6 +86,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Data\DBdata.csproj">
+      <Project>{9d10da96-06ee-4e58-bbdc-7dbfa71ce255}</Project>
+      <Name>DBdata</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Presentation\Presentation.csproj">
       <Project>{1902073e-bae9-49b6-8e64-3bf1952936c7}</Project>
       <Name>Presentation</Name>

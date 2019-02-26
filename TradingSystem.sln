@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation", "Presentatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trade", "Trade\Trade.csproj", "{3ED0023C-0F49-434D-A9D9-7C15E8B8B4C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{9D10DA96-06EE-4E58-BBDC-7DBFA71CE255}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBdata", "Data\DBdata.csproj", "{9D10DA96-06EE-4E58-BBDC-7DBFA71CE255}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

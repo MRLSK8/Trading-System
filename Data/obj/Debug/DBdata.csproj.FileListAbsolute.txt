@@ -1,0 +1,9 @@
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Data\bin\Debug\Data.dll
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Data\bin\Debug\Data.pdb
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Data\bin\Debug\MySql.Data.dll
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Data\bin\Debug\Google.Protobuf.dll
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Data\obj\Debug\DBdata.csprojAssemblyReference.cache
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Data\obj\Debug\DBdata.csproj.CoreCompileInputs.cache
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Data\obj\Debug\DBdata.csproj.CopyComplete
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Data\obj\Debug\Data.dll
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Data\obj\Debug\Data.pdb

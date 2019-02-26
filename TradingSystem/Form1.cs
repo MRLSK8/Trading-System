@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using DBdata;
 
 namespace TradingSystem
 {
@@ -20,7 +21,9 @@ namespace TradingSystem
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
-			
+			//ConnectionDB x = new DBdata.ConnectionDB();
+			//x.Connect();
+			//x.Disconnect();
 		}
 	}
 }
