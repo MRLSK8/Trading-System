@@ -1,0 +1,9 @@
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Presentation\bin\Debug\Presentation.dll
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Presentation\bin\Debug\Presentation.pdb
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Presentation\bin\Debug\Trade.dll
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Presentation\bin\Debug\Trade.pdb
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Presentation\obj\Debug\Presentation.csprojAssemblyReference.cache
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Presentation\obj\Debug\Presentation.csproj.CoreCompileInputs.cache
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Presentation\obj\Debug\Presentation.csproj.CopyComplete
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Presentation\obj\Debug\Presentation.dll
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Presentation\obj\Debug\Presentation.pdb

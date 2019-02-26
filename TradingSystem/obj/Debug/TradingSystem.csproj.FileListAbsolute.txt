@@ -1,0 +1,13 @@
+C:\Users\Aline\Desktop\SI\github\TradingSystem\TradingSystem\bin\Debug\TradingSystem.exe.config
+C:\Users\Aline\Desktop\SI\github\TradingSystem\TradingSystem\bin\Debug\TradingSystem.exe
+C:\Users\Aline\Desktop\SI\github\TradingSystem\TradingSystem\bin\Debug\TradingSystem.pdb
+C:\Users\Aline\Desktop\SI\github\TradingSystem\TradingSystem\bin\Debug\MySql.Data.dll
+C:\Users\Aline\Desktop\SI\github\TradingSystem\TradingSystem\bin\Debug\Google.Protobuf.dll
+C:\Users\Aline\Desktop\SI\github\TradingSystem\TradingSystem\obj\Debug\TradingSystem.csprojAssemblyReference.cache
+C:\Users\Aline\Desktop\SI\github\TradingSystem\TradingSystem\obj\Debug\TradingSystem.Form1.resources
+C:\Users\Aline\Desktop\SI\github\TradingSystem\TradingSystem\obj\Debug\TradingSystem.Properties.Resources.resources
+C:\Users\Aline\Desktop\SI\github\TradingSystem\TradingSystem\obj\Debug\TradingSystem.csproj.GenerateResource.cache
+C:\Users\Aline\Desktop\SI\github\TradingSystem\TradingSystem\obj\Debug\TradingSystem.csproj.CoreCompileInputs.cache
+C:\Users\Aline\Desktop\SI\github\TradingSystem\TradingSystem\obj\Debug\TradingSystem.csproj.CopyComplete
+C:\Users\Aline\Desktop\SI\github\TradingSystem\TradingSystem\obj\Debug\TradingSystem.exe
+C:\Users\Aline\Desktop\SI\github\TradingSystem\TradingSystem\obj\Debug\TradingSystem.pdb
