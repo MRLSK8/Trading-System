@@ -97,7 +97,7 @@ namespace DBdata
 
 		}
 
-		public DataTable Show(DataCategory Category)
+		public DataTable Show()
 		{
 			DataTable DtResult = new DataTable("Category");
 			ConnectionDB connector = new ConnectionDB();
