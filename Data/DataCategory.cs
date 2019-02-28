@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-using System.Data.SqlClient;
 using System.Data;
 using System.Windows;
 using DBdata;
@@ -70,7 +69,7 @@ namespace DBdata
 			}
 			catch (Exception error)
 			{
-				MessageBox.Show("Error: (INSERT INTO)\n\n" + error.Message);
+				MessageBox.Show("Error connecting to the database! (Insert Into)\n\n" + error.Message);
 				response = "Insertion error";
 			}
 			
@@ -84,7 +83,7 @@ namespace DBdata
 
 			try
 			{
-				string connection_string = "UPDATE `category` SET name = " + this._name + ", description = " + this._description + " where idcategory = " + Convert.ToString(this._idCategory) + "";
+				string connection_string = "UPDATE `category` SET name = " + this._name + ", description = " + this._description + " WHERE idcategory = " + Convert.ToString(this._idCategory) + "";
 				MySqlCommand commandUpdate = new MySqlCommand(connection_string, connector.Connect());
 				commandUpdate.ExecuteNonQuery();
 
@@ -94,7 +93,7 @@ namespace DBdata
 			}
 			catch (Exception error)
 			{
-				MessageBox.Show("Error: (UPDATE)\n\n" + error.Message);
+				MessageBox.Show("Error connecting to the database! (Update)\n\n" + error.Message);
 				response = "Update error";
 			}
 
@@ -108,7 +107,7 @@ namespace DBdata
 
 			try
 			{
-				string connection_string = "DELETE FROM category where idcategory = " + Convert.ToString(this._idCategory) + "";
+				string connection_string = "DELETE FROM category WHERE idcategory = " + Convert.ToString(this._idCategory) + "";
 				MySqlCommand commandDelete = new MySqlCommand(connection_string, connector.Connect());
 				commandDelete.ExecuteNonQuery();
 				response = "Deletion completed";
@@ -117,36 +116,30 @@ namespace DBdata
 			}
 			catch (Exception error)
 			{
-				MessageBox.Show("Error:( Delete)\n\n" + error.Message);
+				MessageBox.Show("Error connecting to the database! (Delete)\n\n" + error.Message);
 				response = "Deletion error";
-			}
-			
+			}	
 
 			return response;
-
 		}
 
 		public DataTable Show()
 		{
-			DataTable DtResult = new DataTable("Category");
 			ConnectionDB connector = new ConnectionDB();
+			DataTable DtResult = new DataTable("Category");
 
 			try
 			{
-				SqlConnection connection = new SqlConnection(connector.Stringconnection());
-				connection.Open();
+				string connection_string = "SELECT * FROM category ORDER BY idcategory DESC LIMIT 20";
+				MySqlCommand commandShow = new MySqlCommand(connection_string, connector.Connect());
 
-				string connection_string = "SELECT * FROM category order by idcategory desc limit = 20";
-				SqlCommand commandShow = new SqlCommand(connection_string, connection);
-
-				SqlDataAdapter dt = new SqlDataAdapter(commandShow);
+				MySqlDataAdapter dt = new MySqlDataAdapter(commandShow);
 				dt.Fill(DtResult);
-
 			}
 			catch (Exception error)
 			{
 				DtResult = null;
-				MessageBox.Show("Error connecting to the database! (sqlconnection)\n\n" + error.Message);
+				MessageBox.Show("Error connecting to the database! (Show)\n\n" + error.Message);
 			}
 
 			return DtResult;
@@ -154,25 +147,22 @@ namespace DBdata
 
 		public DataTable FindName(DataCategory Category)
 		{
-			DataTable DtResult = new DataTable("Category");
 			ConnectionDB connector = new ConnectionDB();
+			DataTable DtResult = new DataTable("Category");
 
 			try
 			{
-				SqlConnection connection = new SqlConnection(connector.Stringconnection());
-				connection.Open();
+				string connection_string = "SELECT * FROM `category` WHERE name LIKE "+ this.FindCategoryName +"%";
+				MySqlCommand commandShow = new MySqlCommand(connection_string, connector.Connect());
 
-				string connection_string = "SELECT * FROM category where name like " + this._findCategoryName + "%" + " ";
-				SqlCommand commandShow = new SqlCommand(connection_string, connection);
+				MySqlDataAdapter dt = new MySqlDataAdapter(commandShow);
 
-				SqlDataAdapter dt = new SqlDataAdapter(commandShow);
 				dt.Fill(DtResult);
-
 			}
 			catch (Exception error)
-			{
+			{ 
 				DtResult = null;
-				MessageBox.Show("Error connecting to the database! (sqlconnection)\n\n" + error.Message);
+				MessageBox.Show("Error connecting to the database! (findName)\n\n" + error.Message);
 			}
 
 			return DtResult;

@@ -34,7 +34,6 @@
 			this.tabPage1 = new System.Windows.Forms.TabPage();
 			this.chboxDelete = new System.Windows.Forms.CheckBox();
 			this.dataList = new System.Windows.Forms.DataGridView();
-			this.Delete = new System.Windows.Forms.DataGridViewCheckBoxColumn();
 			this.lblTotal = new System.Windows.Forms.Label();
 			this.btnPrint = new System.Windows.Forms.Button();
 			this.btnDelete = new System.Windows.Forms.Button();
@@ -55,6 +54,7 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.errorIcon = new System.Windows.Forms.ErrorProvider(this.components);
 			this.toolTipMessage = new System.Windows.Forms.ToolTip(this.components);
+			this.Delete = new System.Windows.Forms.DataGridViewCheckBoxColumn();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataList)).BeginInit();
@@ -83,7 +83,7 @@
 			this.tabControl1.Location = new System.Drawing.Point(5, 52);
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
-			this.tabControl1.Size = new System.Drawing.Size(742, 419);
+			this.tabControl1.Size = new System.Drawing.Size(574, 425);
 			this.tabControl1.TabIndex = 1;
 			// 
 			// tabPage1
@@ -96,10 +96,11 @@
 			this.tabPage1.Controls.Add(this.btnFindName);
 			this.tabPage1.Controls.Add(this.textFindName);
 			this.tabPage1.Controls.Add(this.label2);
+			this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.tabPage1.Location = new System.Drawing.Point(4, 34);
 			this.tabPage1.Name = "tabPage1";
 			this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage1.Size = new System.Drawing.Size(734, 381);
+			this.tabPage1.Size = new System.Drawing.Size(566, 387);
 			this.tabPage1.TabIndex = 0;
 			this.tabPage1.Text = "List of categories";
 			this.tabPage1.UseVisualStyleBackColor = true;
@@ -128,24 +129,18 @@
 			this.dataList.Name = "dataList";
 			this.dataList.ReadOnly = true;
 			this.dataList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.dataList.Size = new System.Drawing.Size(720, 285);
+			this.dataList.Size = new System.Drawing.Size(552, 289);
 			this.dataList.TabIndex = 6;
-			// 
-			// Delete
-			// 
-			this.Delete.HeaderText = "Delete";
-			this.Delete.Name = "Delete";
-			this.Delete.ReadOnly = true;
 			// 
 			// lblTotal
 			// 
 			this.lblTotal.AutoSize = true;
 			this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblTotal.Location = new System.Drawing.Point(668, 60);
+			this.lblTotal.Location = new System.Drawing.Point(332, 60);
 			this.lblTotal.Name = "lblTotal";
-			this.lblTotal.Size = new System.Drawing.Size(60, 24);
+			this.lblTotal.Size = new System.Drawing.Size(180, 24);
 			this.lblTotal.TabIndex = 5;
-			this.lblTotal.Text = "label3";
+			this.lblTotal.Text = "Number of Records:";
 			// 
 			// btnPrint
 			// 
@@ -177,6 +172,7 @@
 			this.btnFindName.TabIndex = 2;
 			this.btnFindName.Text = "Search";
 			this.btnFindName.UseVisualStyleBackColor = true;
+			this.btnFindName.Click += new System.EventHandler(this.btnFindName_Click);
 			// 
 			// textFindName
 			// 
@@ -185,6 +181,7 @@
 			this.textFindName.Name = "textFindName";
 			this.textFindName.Size = new System.Drawing.Size(203, 29);
 			this.textFindName.TabIndex = 1;
+			this.textFindName.TextChanged += new System.EventHandler(this.textFindName_TextChanged);
 			// 
 			// label2
 			// 
@@ -331,16 +328,25 @@
 			// 
 			this.toolTipMessage.IsBalloon = true;
 			// 
+			// Delete
+			// 
+			this.Delete.HeaderText = "Delete";
+			this.Delete.Name = "Delete";
+			this.Delete.ReadOnly = true;
+			// 
 			// FormCategory
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(751, 473);
+			this.ClientSize = new System.Drawing.Size(584, 478);
 			this.Controls.Add(this.tabControl1);
 			this.Controls.Add(this.label1);
 			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Margin = new System.Windows.Forms.Padding(7);
+			this.MaximizeBox = false;
 			this.Name = "FormCategory";
+			this.ShowIcon = false;
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "FormCategory";
 			this.Load += new System.EventHandler(this.FormCategory_Load);
 			this.tabControl1.ResumeLayout(false);
@@ -369,7 +375,6 @@
 		private System.Windows.Forms.TabPage tabPage2;
 		private System.Windows.Forms.CheckBox chboxDelete;
 		private System.Windows.Forms.DataGridView dataList;
-		private System.Windows.Forms.DataGridViewCheckBoxColumn Delete;
 		private System.Windows.Forms.Label lblTotal;
 		private System.Windows.Forms.GroupBox groupBox1;
 		private System.Windows.Forms.TextBox textDescriptionCat;
@@ -384,5 +389,6 @@
 		private System.Windows.Forms.Button btnSave;
 		private System.Windows.Forms.ErrorProvider errorIcon;
 		private System.Windows.Forms.ToolTip toolTipMessage;
+		private System.Windows.Forms.DataGridViewCheckBoxColumn Delete;
 	}
 }

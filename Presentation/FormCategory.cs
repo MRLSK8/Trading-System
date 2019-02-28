@@ -79,22 +79,32 @@ namespace Presentation
 		{
 			this.dataList.DataSource = TradeCategory.Show();
 			this.HideColumns();
-			lblTotal.Text = "Total categories: " + Convert.ToString(dataList.Rows.Count);
+			lblTotal.Text = "Number of Records: " + Convert.ToString(dataList.Rows.Count);
 		}
 
 		private void FindByName()
 		{
 			this.dataList.DataSource = TradeCategory.FindName(this.textFindName.Text);
 			this.HideColumns();
-			lblTotal.Text = "Total categories: " + Convert.ToString(dataList.Rows.Count);
+			lblTotal.Text = "Number of Records: " + Convert.ToString(dataList.Rows.Count);
 		}
 
 		private void FormCategory_Load(object sender, EventArgs e)
 		{
-			this.Top = 0;
-			this.Left = 0;
+			//this.Top = 0;
+			//this.Left = 0;
 			this.ShowOnDataGrid();
 			this.EnableButtons();
+		}
+
+		private void btnFindName_Click(object sender, EventArgs e)
+		{
+			this.FindByName();
+		}
+
+		private void textFindName_TextChanged(object sender, EventArgs e)
+		{
+			this.FindByName();
 		}
 
 		private void btnDelete_Click(object sender, EventArgs e)
@@ -106,5 +116,6 @@ namespace Presentation
 		{
 
 		}
+		
 	}
 }

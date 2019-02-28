@@ -16,7 +16,7 @@ namespace DBdata
 
 		public string Stringconnection()
 		{
-			return "server=localhost;port=3306;UserId=root;database=tradedb";
+			return "Server= localhost; Port = 3306; UserId = root; Database = tradedb";
 		}
 
 		public MySqlConnection Connect()
@@ -32,7 +32,7 @@ namespace DBdata
 			}
 			catch (Exception error)
 			{
-				MessageBox.Show("Error connecting to the database!\n\n" + error.Message);
+				MessageBox.Show("Error connecting to the database!AA\n\n" + error.Message);
 			}
 
 			return this.connection;
@@ -49,7 +49,7 @@ namespace DBdata
 			}
 			catch (Exception error)
 			{
-				MessageBox.Show("Error disconnecting to the database!\n\n" + error.Message);
+				MessageBox.Show("Error disconnecting to the database!DFJ\n\n" + error.Message);
 			}
 			
 		}
