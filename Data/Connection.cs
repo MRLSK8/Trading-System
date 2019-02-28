@@ -45,7 +45,7 @@ namespace DBdata
 			{
 				MySqlConnection connection = new MySqlConnection(this.Stringconnection());
 				connection.Close();
-				MessageBox.Show("Disconnected");
+				MessageBox.Show("Disconnected to the database!");
 			}
 			catch (Exception error)
 			{

@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.label1 = new System.Windows.Forms.Label();
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -42,21 +43,24 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.btnCancel = new System.Windows.Forms.Button();
+			this.btnNew = new System.Windows.Forms.Button();
+			this.btnEdit = new System.Windows.Forms.Button();
+			this.btnSave = new System.Windows.Forms.Button();
+			this.label5 = new System.Windows.Forms.Label();
 			this.textDescriptionCat = new System.Windows.Forms.TextBox();
 			this.textNameCat = new System.Windows.Forms.TextBox();
 			this.textIdCat = new System.Windows.Forms.TextBox();
 			this.label4 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
-			this.label5 = new System.Windows.Forms.Label();
-			this.btnSave = new System.Windows.Forms.Button();
-			this.btnEdit = new System.Windows.Forms.Button();
-			this.btnNew = new System.Windows.Forms.Button();
-			this.btnCancel = new System.Windows.Forms.Button();
+			this.errorIcon = new System.Windows.Forms.ErrorProvider(this.components);
+			this.toolTipMessage = new System.Windows.Forms.ToolTip(this.components);
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataList)).BeginInit();
 			this.tabPage2.SuspendLayout();
 			this.groupBox1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.errorIcon)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -222,6 +226,57 @@
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Categories";
 			// 
+			// btnCancel
+			// 
+			this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnCancel.Location = new System.Drawing.Point(258, 231);
+			this.btnCancel.Name = "btnCancel";
+			this.btnCancel.Size = new System.Drawing.Size(68, 30);
+			this.btnCancel.TabIndex = 10;
+			this.btnCancel.Text = "Cancel";
+			this.btnCancel.UseVisualStyleBackColor = true;
+			this.btnCancel.Click += new System.EventHandler(this.button4_Click);
+			// 
+			// btnNew
+			// 
+			this.btnNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnNew.Location = new System.Drawing.Point(10, 231);
+			this.btnNew.Name = "btnNew";
+			this.btnNew.Size = new System.Drawing.Size(68, 30);
+			this.btnNew.TabIndex = 9;
+			this.btnNew.Text = "New";
+			this.btnNew.UseVisualStyleBackColor = true;
+			// 
+			// btnEdit
+			// 
+			this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnEdit.Location = new System.Drawing.Point(93, 231);
+			this.btnEdit.Name = "btnEdit";
+			this.btnEdit.Size = new System.Drawing.Size(68, 30);
+			this.btnEdit.TabIndex = 8;
+			this.btnEdit.Text = "Edit";
+			this.btnEdit.UseVisualStyleBackColor = true;
+			// 
+			// btnSave
+			// 
+			this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnSave.Location = new System.Drawing.Point(177, 231);
+			this.btnSave.Name = "btnSave";
+			this.btnSave.Size = new System.Drawing.Size(68, 30);
+			this.btnSave.TabIndex = 7;
+			this.btnSave.Text = "Save";
+			this.btnSave.UseVisualStyleBackColor = true;
+			// 
+			// label5
+			// 
+			this.label5.AutoSize = true;
+			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label5.Location = new System.Drawing.Point(6, 128);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(104, 24);
+			this.label5.TabIndex = 6;
+			this.label5.Text = "Description";
+			// 
 			// textDescriptionCat
 			// 
 			this.textDescriptionCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -268,56 +323,13 @@
 			this.label3.TabIndex = 0;
 			this.label3.Text = "Code";
 			// 
-			// label5
+			// errorIcon
 			// 
-			this.label5.AutoSize = true;
-			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label5.Location = new System.Drawing.Point(6, 128);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(104, 24);
-			this.label5.TabIndex = 6;
-			this.label5.Text = "Description";
+			this.errorIcon.ContainerControl = this;
 			// 
-			// btnSave
+			// toolTipMessage
 			// 
-			this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnSave.Location = new System.Drawing.Point(177, 231);
-			this.btnSave.Name = "btnSave";
-			this.btnSave.Size = new System.Drawing.Size(68, 30);
-			this.btnSave.TabIndex = 7;
-			this.btnSave.Text = "Save";
-			this.btnSave.UseVisualStyleBackColor = true;
-			// 
-			// btnEdit
-			// 
-			this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnEdit.Location = new System.Drawing.Point(93, 231);
-			this.btnEdit.Name = "btnEdit";
-			this.btnEdit.Size = new System.Drawing.Size(68, 30);
-			this.btnEdit.TabIndex = 8;
-			this.btnEdit.Text = "Edit";
-			this.btnEdit.UseVisualStyleBackColor = true;
-			// 
-			// btnNew
-			// 
-			this.btnNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnNew.Location = new System.Drawing.Point(10, 231);
-			this.btnNew.Name = "btnNew";
-			this.btnNew.Size = new System.Drawing.Size(68, 30);
-			this.btnNew.TabIndex = 9;
-			this.btnNew.Text = "New";
-			this.btnNew.UseVisualStyleBackColor = true;
-			// 
-			// btnCancel
-			// 
-			this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnCancel.Location = new System.Drawing.Point(258, 231);
-			this.btnCancel.Name = "btnCancel";
-			this.btnCancel.Size = new System.Drawing.Size(68, 30);
-			this.btnCancel.TabIndex = 10;
-			this.btnCancel.Text = "Cancel";
-			this.btnCancel.UseVisualStyleBackColor = true;
-			this.btnCancel.Click += new System.EventHandler(this.button4_Click);
+			this.toolTipMessage.IsBalloon = true;
 			// 
 			// FormCategory
 			// 
@@ -338,6 +350,7 @@
 			this.tabPage2.ResumeLayout(false);
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.errorIcon)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -369,5 +382,7 @@
 		private System.Windows.Forms.Button btnNew;
 		private System.Windows.Forms.Button btnEdit;
 		private System.Windows.Forms.Button btnSave;
+		private System.Windows.Forms.ErrorProvider errorIcon;
+		private System.Windows.Forms.ToolTip toolTipMessage;
 	}
 }

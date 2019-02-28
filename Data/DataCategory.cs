@@ -57,27 +57,46 @@ namespace DBdata
 		{
 
 			ConnectionDB connector = new ConnectionDB();
+			string response;
 
-			string connection_string = "INSERT INTO `category` VALUES (DEFAULT," + this._name + ", " + this._description + ")";
-			MySqlCommand commandInsert = new MySqlCommand(connection_string, connector.Connect());
+			try
+			{
+				string connection_string = "INSERT INTO `category` VALUES (DEFAULT," + this._name + ", " + this._description + ")";
+				MySqlCommand commandInsert = new MySqlCommand(connection_string, connector.Connect());
+				commandInsert.ExecuteNonQuery();
 
-			string response = commandInsert.ExecuteNonQuery() == 1 ? "Insertion completed" : "Insertion error";
-
-			connector.Disconnect();
-
+				response = "Insertion completed";
+				connector.Disconnect();
+			}
+			catch (Exception error)
+			{
+				MessageBox.Show("Error: (INSERT INTO)\n\n" + error.Message);
+				response = "Insertion error";
+			}
+			
 			return response;
 		}
 
 		public string Update(DataCategory Category)
 		{
 			ConnectionDB connector = new ConnectionDB();
+			string response;
 
-			string connection_string = "UPDATE `category` SET name = " + this._name + ", description = " + this._description + " where idcategory = " + this._idCategory + "";
-			MySqlCommand commandUpdate = new MySqlCommand(connection_string, connector.Connect());
+			try
+			{
+				string connection_string = "UPDATE `category` SET name = " + this._name + ", description = " + this._description + " where idcategory = " + Convert.ToString(this._idCategory) + "";
+				MySqlCommand commandUpdate = new MySqlCommand(connection_string, connector.Connect());
+				commandUpdate.ExecuteNonQuery();
 
-			string response = commandUpdate.ExecuteNonQuery() == 1 ? "Update completed" : "Update error";
+				response = "Update completed";  
+				connector.Disconnect();
 
-			connector.Disconnect();
+			}
+			catch (Exception error)
+			{
+				MessageBox.Show("Error: (UPDATE)\n\n" + error.Message);
+				response = "Update error";
+			}
 
 			return response;
 		}
@@ -85,13 +104,23 @@ namespace DBdata
 		public string Delete(DataCategory Category)
 		{
 			ConnectionDB connector = new ConnectionDB();
+			string response;
 
-			string connection_string = "DELETE FROM category where idcategory = " + this._idCategory + "";
-			MySqlCommand commandDelete = new MySqlCommand(connection_string, connector.Connect());
+			try
+			{
+				string connection_string = "DELETE FROM category where idcategory = " + Convert.ToString(this._idCategory) + "";
+				MySqlCommand commandDelete = new MySqlCommand(connection_string, connector.Connect());
+				commandDelete.ExecuteNonQuery();
+				response = "Deletion completed";
 
-			string response = commandDelete.ExecuteNonQuery() == 1 ? "Deletion completed" : "Deletion error";
-
-			connector.Disconnect();
+				connector.Disconnect();
+			}
+			catch (Exception error)
+			{
+				MessageBox.Show("Error:( Delete)\n\n" + error.Message);
+				response = "Deletion error";
+			}
+			
 
 			return response;
 
@@ -107,7 +136,7 @@ namespace DBdata
 				SqlConnection connection = new SqlConnection(connector.Stringconnection());
 				connection.Open();
 
-				string connection_string = "SELECT * FROM category order by idcategory desc limit = 10";
+				string connection_string = "SELECT * FROM category order by idcategory desc limit = 20";
 				SqlCommand commandShow = new SqlCommand(connection_string, connection);
 
 				SqlDataAdapter dt = new SqlDataAdapter(commandShow);

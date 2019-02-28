@@ -15,3 +15,5 @@ C:\Users\Aline\Desktop\SI\github\TradingSystem\TradingSystem\bin\Debug\Data.dll
 C:\Users\Aline\Desktop\SI\github\TradingSystem\TradingSystem\bin\Debug\Presentation.dll
 C:\Users\Aline\Desktop\SI\github\TradingSystem\TradingSystem\bin\Debug\Data.pdb
 C:\Users\Aline\Desktop\SI\github\TradingSystem\TradingSystem\bin\Debug\Presentation.pdb
+C:\Users\Aline\Desktop\SI\github\TradingSystem\TradingSystem\bin\Debug\Trade.dll
+C:\Users\Aline\Desktop\SI\github\TradingSystem\TradingSystem\bin\Debug\Trade.pdb
