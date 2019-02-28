@@ -11,3 +11,5 @@ C:\Users\Aline\Desktop\SI\github\TradingSystem\Presentation\bin\Debug\Google.Pro
 C:\Users\Aline\Desktop\SI\github\TradingSystem\Presentation\bin\Debug\Trade.pdb
 C:\Users\Aline\Desktop\SI\github\TradingSystem\Presentation\bin\Debug\Data.pdb
 C:\Users\Aline\Desktop\SI\github\TradingSystem\Presentation\obj\Debug\Presentation.csproj.CopyComplete
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Presentation\obj\Debug\Presentation.FormCategory.resources
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Presentation\obj\Debug\Presentation.csproj.GenerateResource.cache
