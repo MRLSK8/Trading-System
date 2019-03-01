@@ -60,11 +60,11 @@ namespace DBdata
 
 			try
 			{
-				string connection_string = "INSERT INTO `category` VALUES (DEFAULT," + this._name + ", " + this._description + ")";
+				string connection_string = "INSERT INTO `category` VALUES (DEFAULT,'" + this.Name + "', '" + this.Description + "')";
 				MySqlCommand commandInsert = new MySqlCommand(connection_string, connector.Connect());
 				commandInsert.ExecuteNonQuery();
 
-				response = "Insertion completed";
+				response = "OK";
 				connector.Disconnect();
 			}
 			catch (Exception error)
@@ -83,11 +83,11 @@ namespace DBdata
 
 			try
 			{
-				string connection_string = "UPDATE `category` SET name = " + this._name + ", description = " + this._description + " WHERE idcategory = " + Convert.ToString(this._idCategory) + "";
+				string connection_string = "UPDATE `category` SET name = '" + this._name + "', description = '" + this.Description + "' WHERE idcategory = '" + Convert.ToString(this.IdCategory) + "'";
 				MySqlCommand commandUpdate = new MySqlCommand(connection_string, connector.Connect());
 				commandUpdate.ExecuteNonQuery();
 
-				response = "Update completed";  
+				response = "OK";  
 				connector.Disconnect();
 
 			}
@@ -107,10 +107,10 @@ namespace DBdata
 
 			try
 			{
-				string connection_string = "DELETE FROM category WHERE idcategory = " + Convert.ToString(this._idCategory) + "";
+				string connection_string = "DELETE FROM category WHERE idcategory = '" + Convert.ToString(this.IdCategory) + "'";
 				MySqlCommand commandDelete = new MySqlCommand(connection_string, connector.Connect());
 				commandDelete.ExecuteNonQuery();
-				response = "Deletion completed";
+				response = "OK";
 
 				connector.Disconnect();
 			}
@@ -152,15 +152,16 @@ namespace DBdata
 
 			try
 			{
-				string connection_string = "SELECT * FROM `category` WHERE name LIKE "+ this.FindCategoryName +"%";
+				string connection_string = "SELECT * FROM `category` WHERE name LIKE '" + this.FindCategoryName + "%'";
 				MySqlCommand commandShow = new MySqlCommand(connection_string, connector.Connect());
 
 				MySqlDataAdapter dt = new MySqlDataAdapter(commandShow);
-
+			
 				dt.Fill(DtResult);
+				
 			}
 			catch (Exception error)
-			{ 
+			{
 				DtResult = null;
 				MessageBox.Show("Error connecting to the database! (findName)\n\n" + error.Message);
 			}

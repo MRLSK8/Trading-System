@@ -34,10 +34,9 @@
 			this.tabPage1 = new System.Windows.Forms.TabPage();
 			this.chboxDelete = new System.Windows.Forms.CheckBox();
 			this.dataList = new System.Windows.Forms.DataGridView();
+			this.Delete = new System.Windows.Forms.DataGridViewCheckBoxColumn();
 			this.lblTotal = new System.Windows.Forms.Label();
-			this.btnPrint = new System.Windows.Forms.Button();
 			this.btnDelete = new System.Windows.Forms.Button();
-			this.btnFindName = new System.Windows.Forms.Button();
 			this.textFindName = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -54,7 +53,6 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.errorIcon = new System.Windows.Forms.ErrorProvider(this.components);
 			this.toolTipMessage = new System.Windows.Forms.ToolTip(this.components);
-			this.Delete = new System.Windows.Forms.DataGridViewCheckBoxColumn();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataList)).BeginInit();
@@ -91,9 +89,7 @@
 			this.tabPage1.Controls.Add(this.chboxDelete);
 			this.tabPage1.Controls.Add(this.dataList);
 			this.tabPage1.Controls.Add(this.lblTotal);
-			this.tabPage1.Controls.Add(this.btnPrint);
 			this.tabPage1.Controls.Add(this.btnDelete);
-			this.tabPage1.Controls.Add(this.btnFindName);
 			this.tabPage1.Controls.Add(this.textFindName);
 			this.tabPage1.Controls.Add(this.label2);
 			this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -115,12 +111,15 @@
 			this.chboxDelete.TabIndex = 7;
 			this.chboxDelete.Text = "Delete";
 			this.chboxDelete.UseVisualStyleBackColor = true;
+			this.chboxDelete.CheckedChanged += new System.EventHandler(this.chboxDelete_CheckedChanged);
 			// 
 			// dataList
 			// 
 			this.dataList.AllowUserToAddRows = false;
 			this.dataList.AllowUserToDeleteRows = false;
-			this.dataList.AllowUserToOrderColumns = true;
+			this.dataList.AllowUserToResizeColumns = false;
+			this.dataList.AllowUserToResizeRows = false;
+			this.dataList.BackgroundColor = System.Drawing.Color.WhiteSmoke;
 			this.dataList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Delete});
@@ -131,6 +130,15 @@
 			this.dataList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dataList.Size = new System.Drawing.Size(552, 289);
 			this.dataList.TabIndex = 6;
+			this.dataList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataList_CellContentClick);
+			this.dataList.DoubleClick += new System.EventHandler(this.dataList_DoubleClick);
+			// 
+			// Delete
+			// 
+			this.Delete.HeaderText = "Delete";
+			this.Delete.Name = "Delete";
+			this.Delete.ReadOnly = true;
+			this.Delete.Width = 150;
 			// 
 			// lblTotal
 			// 
@@ -142,37 +150,16 @@
 			this.lblTotal.TabIndex = 5;
 			this.lblTotal.Text = "Number of Records:";
 			// 
-			// btnPrint
-			// 
-			this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnPrint.Location = new System.Drawing.Point(482, 9);
-			this.btnPrint.Name = "btnPrint";
-			this.btnPrint.Size = new System.Drawing.Size(78, 29);
-			this.btnPrint.TabIndex = 4;
-			this.btnPrint.Text = "Print";
-			this.btnPrint.UseVisualStyleBackColor = true;
-			// 
 			// btnDelete
 			// 
 			this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnDelete.Location = new System.Drawing.Point(389, 9);
+			this.btnDelete.Location = new System.Drawing.Point(300, 9);
 			this.btnDelete.Name = "btnDelete";
 			this.btnDelete.Size = new System.Drawing.Size(78, 29);
 			this.btnDelete.TabIndex = 3;
 			this.btnDelete.Text = "Delete";
 			this.btnDelete.UseVisualStyleBackColor = true;
 			this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-			// 
-			// btnFindName
-			// 
-			this.btnFindName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnFindName.Location = new System.Drawing.Point(296, 9);
-			this.btnFindName.Name = "btnFindName";
-			this.btnFindName.Size = new System.Drawing.Size(78, 29);
-			this.btnFindName.TabIndex = 2;
-			this.btnFindName.Text = "Search";
-			this.btnFindName.UseVisualStyleBackColor = true;
-			this.btnFindName.Click += new System.EventHandler(this.btnFindName_Click);
 			// 
 			// textFindName
 			// 
@@ -199,7 +186,7 @@
 			this.tabPage2.Location = new System.Drawing.Point(4, 34);
 			this.tabPage2.Name = "tabPage2";
 			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage2.Size = new System.Drawing.Size(734, 381);
+			this.tabPage2.Size = new System.Drawing.Size(566, 387);
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "Settings";
 			this.tabPage2.UseVisualStyleBackColor = true;
@@ -218,7 +205,7 @@
 			this.groupBox1.Controls.Add(this.label3);
 			this.groupBox1.Location = new System.Drawing.Point(8, 18);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(691, 352);
+			this.groupBox1.Size = new System.Drawing.Size(552, 352);
 			this.groupBox1.TabIndex = 0;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Categories";
@@ -226,13 +213,13 @@
 			// btnCancel
 			// 
 			this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnCancel.Location = new System.Drawing.Point(258, 231);
+			this.btnCancel.Location = new System.Drawing.Point(267, 231);
 			this.btnCancel.Name = "btnCancel";
 			this.btnCancel.Size = new System.Drawing.Size(68, 30);
 			this.btnCancel.TabIndex = 10;
 			this.btnCancel.Text = "Cancel";
 			this.btnCancel.UseVisualStyleBackColor = true;
-			this.btnCancel.Click += new System.EventHandler(this.button4_Click);
+			this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
 			// 
 			// btnNew
 			// 
@@ -243,26 +230,29 @@
 			this.btnNew.TabIndex = 9;
 			this.btnNew.Text = "New";
 			this.btnNew.UseVisualStyleBackColor = true;
+			this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
 			// 
 			// btnEdit
 			// 
 			this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnEdit.Location = new System.Drawing.Point(93, 231);
+			this.btnEdit.Location = new System.Drawing.Point(184, 231);
 			this.btnEdit.Name = "btnEdit";
 			this.btnEdit.Size = new System.Drawing.Size(68, 30);
 			this.btnEdit.TabIndex = 8;
 			this.btnEdit.Text = "Edit";
 			this.btnEdit.UseVisualStyleBackColor = true;
+			this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
 			// 
 			// btnSave
 			// 
 			this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnSave.Location = new System.Drawing.Point(177, 231);
+			this.btnSave.Location = new System.Drawing.Point(97, 231);
 			this.btnSave.Name = "btnSave";
 			this.btnSave.Size = new System.Drawing.Size(68, 30);
 			this.btnSave.TabIndex = 7;
 			this.btnSave.Text = "Save";
 			this.btnSave.UseVisualStyleBackColor = true;
+			this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
 			// 
 			// label5
 			// 
@@ -281,7 +271,7 @@
 			this.textDescriptionCat.Multiline = true;
 			this.textDescriptionCat.Name = "textDescriptionCat";
 			this.textDescriptionCat.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-			this.textDescriptionCat.Size = new System.Drawing.Size(201, 68);
+			this.textDescriptionCat.Size = new System.Drawing.Size(210, 68);
 			this.textDescriptionCat.TabIndex = 5;
 			// 
 			// textNameCat
@@ -289,7 +279,7 @@
 			this.textNameCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.textNameCat.Location = new System.Drawing.Point(82, 91);
 			this.textNameCat.Name = "textNameCat";
-			this.textNameCat.Size = new System.Drawing.Size(133, 26);
+			this.textNameCat.Size = new System.Drawing.Size(157, 26);
 			this.textNameCat.TabIndex = 4;
 			// 
 			// textIdCat
@@ -297,7 +287,7 @@
 			this.textIdCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.textIdCat.Location = new System.Drawing.Point(82, 53);
 			this.textIdCat.Name = "textIdCat";
-			this.textIdCat.Size = new System.Drawing.Size(133, 26);
+			this.textIdCat.Size = new System.Drawing.Size(83, 26);
 			this.textIdCat.TabIndex = 3;
 			// 
 			// label4
@@ -322,17 +312,12 @@
 			// 
 			// errorIcon
 			// 
+			this.errorIcon.BlinkRate = 300;
 			this.errorIcon.ContainerControl = this;
 			// 
 			// toolTipMessage
 			// 
 			this.toolTipMessage.IsBalloon = true;
-			// 
-			// Delete
-			// 
-			this.Delete.HeaderText = "Delete";
-			this.Delete.Name = "Delete";
-			this.Delete.ReadOnly = true;
 			// 
 			// FormCategory
 			// 
@@ -367,9 +352,7 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.TabControl tabControl1;
 		private System.Windows.Forms.TabPage tabPage1;
-		private System.Windows.Forms.Button btnPrint;
 		private System.Windows.Forms.Button btnDelete;
-		private System.Windows.Forms.Button btnFindName;
 		private System.Windows.Forms.TextBox textFindName;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.TabPage tabPage2;

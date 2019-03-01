@@ -27,7 +27,6 @@ namespace DBdata
 				MySqlConnection connection = new MySqlConnection(this.Stringconnection());
 				connection.Open();
 				this.connection = connection;
-				MessageBox.Show("Connected to the database!");
 
 			}
 			catch (Exception error)
@@ -45,7 +44,6 @@ namespace DBdata
 			{
 				MySqlConnection connection = new MySqlConnection(this.Stringconnection());
 				connection.Close();
-				MessageBox.Show("Disconnected to the database!");
 			}
 			catch (Exception error)
 			{
