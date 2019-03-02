@@ -130,7 +130,7 @@ namespace DBdata
 
 			try
 			{
-				string connection_string = "SELECT * FROM category ORDER BY idcategory DESC LIMIT 20";
+				string connection_string = "SELECT * FROM category ORDER BY idcategory DESC LIMIT 100";
 				MySqlCommand commandShow = new MySqlCommand(connection_string, connector.Connect());
 
 				MySqlDataAdapter dt = new MySqlDataAdapter(commandShow);

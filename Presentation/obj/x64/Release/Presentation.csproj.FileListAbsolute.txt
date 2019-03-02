@@ -1,0 +1,15 @@
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Presentation\bin\x64\Release\Presentation.dll
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Presentation\bin\x64\Release\Presentation.pdb
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Presentation\bin\x64\Release\Trade.dll
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Presentation\bin\x64\Release\Data.dll
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Presentation\bin\x64\Release\MySql.Data.dll
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Presentation\bin\x64\Release\Google.Protobuf.dll
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Presentation\bin\x64\Release\Trade.pdb
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Presentation\bin\x64\Release\Data.pdb
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Presentation\obj\x64\Release\Presentation.csprojAssemblyReference.cache
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Presentation\obj\x64\Release\Presentation.FormCategory.resources
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Presentation\obj\x64\Release\Presentation.csproj.GenerateResource.cache
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Presentation\obj\x64\Release\Presentation.csproj.CoreCompileInputs.cache
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Presentation\obj\x64\Release\Presentation.csproj.CopyComplete
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Presentation\obj\x64\Release\Presentation.dll
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Presentation\obj\x64\Release\Presentation.pdb

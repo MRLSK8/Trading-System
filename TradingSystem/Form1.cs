@@ -21,9 +21,6 @@ namespace TradingSystem
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
-			//ConnectionDB x = new DBdata.ConnectionDB();
-			//x.Connect();
-			//x.Disconnect();
 		}
 	}
 }

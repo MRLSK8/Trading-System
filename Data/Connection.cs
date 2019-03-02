@@ -31,7 +31,7 @@ namespace DBdata
 			}
 			catch (Exception error)
 			{
-				MessageBox.Show("Error connecting to the database!AA\n\n" + error.Message);
+				MessageBox.Show("Error connecting to the database!\n\n" + error.Message);
 			}
 
 			return this.connection;
@@ -47,7 +47,7 @@ namespace DBdata
 			}
 			catch (Exception error)
 			{
-				MessageBox.Show("Error disconnecting to the database!DFJ\n\n" + error.Message);
+				MessageBox.Show("Error disconnecting to the database!\n\n" + error.Message);
 			}
 			
 		}

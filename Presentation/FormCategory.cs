@@ -98,7 +98,11 @@ namespace Presentation
 			this.dataList.DataSource = TradeCategory.FindName(this.textFindName.Text);
 			this.HideColumns();
 			lblTotal.Text = "Number of Records: " + Convert.ToString(dataList.Rows.Count);
-
+			
+			if(this.textFindName.Text == String.Empty)
+			{
+				this.ShowOnDataGrid();
+			}
 			dataList.AutoResizeColumns();
 		}
 
@@ -255,6 +259,7 @@ namespace Presentation
 					}
 					this.ShowMessageOk("Record deleted successfully");
 					this.ShowOnDataGrid();
+					chboxDelete.Checked = false;
 				}
 			}
 			catch (Exception error)

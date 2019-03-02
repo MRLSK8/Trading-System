@@ -1,0 +1,11 @@
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Trade\bin\x64\Release\Trade.dll
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Trade\bin\x64\Release\Trade.pdb
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Trade\bin\x64\Release\Data.dll
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Trade\bin\x64\Release\MySql.Data.dll
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Trade\bin\x64\Release\Google.Protobuf.dll
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Trade\bin\x64\Release\Data.pdb
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Trade\obj\x64\Release\Trade.csprojAssemblyReference.cache
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Trade\obj\x64\Release\Trade.csproj.CoreCompileInputs.cache
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Trade\obj\x64\Release\Trade.csproj.CopyComplete
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Trade\obj\x64\Release\Trade.dll
+C:\Users\Aline\Desktop\SI\github\TradingSystem\Trade\obj\x64\Release\Trade.pdb
